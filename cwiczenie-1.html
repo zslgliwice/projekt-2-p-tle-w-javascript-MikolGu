@@ -23,10 +23,14 @@
 	
 		function wylosuj()
 		{
-			
-			
-			
-			var liczba = Math.floor(Math.random() * 1000) + 1;
+			let powtorzenia = document.querySelector("#ile").value;
+			let wynik = document.querySelector("#wynik");
+			wynik.innerHTML = `Liczby:   `;
+
+			for(let i = 0; i < powtorzenia; i++){
+				var liczba = Math.floor(Math.random() * 1000) + 1;
+				wynik.innerHTML += `${liczba} `;
+			}
 			
 		}
 
