@@ -2,11 +2,9 @@
 <html lang="pl">
 
 <head>
-
 	<meta charset="utf-8">
 	<title>4 - Pętle w JavaScript</title>
 	<link href="arkusz-cwiczenia.css" rel="stylesheet">
-	
 </head>
 
 <body>
@@ -20,12 +18,30 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
-		function sledztwo()
-		{
-			
-		}
+		function sledztwo() {
+			let wartosc = document.querySelector("#liczba").value;
+			let wynik = document.querySelector("#wynik");
 
+			wynik.innerHTML = '';	
+
+			if (wartosc < 0 || wartosc > 9) {
+				wynik.innerHTML = `No sh*t Scherlock!`;
+			} else {
+				for (let i = 0; i < 10; i++) {
+					let pom = 0;
+				
+					if (i < wartosc) {
+						pom = wartosc - i;
+						wynik.innerHTML += i + ` jest niewinne, jest o ` + pom + ` mniejsze niż morderca<br>`;
+					} else if (i == wartosc) {
+						wynik.innerHTML += i + ` jest mordercą! Aresztuj je Watsonie<br>`;
+					} else if (i > wartosc) {
+						pom = i - wartosc;
+						wynik.innerHTML += i + ` jest niewinne, jest o ` + pom + ` większe niż morderca<br>`;
+					}
+				}
+			}
+		}
 	</script>
 
 </body>
