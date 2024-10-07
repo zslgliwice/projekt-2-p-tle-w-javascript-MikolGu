@@ -6,3 +6,11 @@ body
 	padding: 20px;
 }
 
+
+#liczby{
+	display: flex;
+}
+
+.liczby{
+	margin-right: 20px;
+}

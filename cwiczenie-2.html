@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<title>2 - Pętle w JavaScript</title>
 	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+
 	
 </head>
 
@@ -23,7 +24,29 @@
 	
 		function generuj()
 		{
-			
+			let x = document.getElementById("x").value;
+			let wynik = document.getElementById("wynik");
+			wynik.innerHTML = `
+
+			<div id="liczby">
+				<div class="liczby" id="parzyste">
+					Parzyste: 	
+				</div>
+				
+				<div class="liczby" id="nieparzyste">
+					Nieparzyste: 	
+				</div>
+			</div>`;
+			let parzyste = document.querySelector("#parzyste");
+			let nieparzyste = document.querySelector("#nieparzyste");
+			for(let i = 1; i <=x; i++){
+				if(i%2==0){
+					parzyste.innerHTML += `${i} `;
+
+				}else{
+					nieparzyste.innerHTML += `${i} `;
+				}
+			}
 		}
 
 	</script>
